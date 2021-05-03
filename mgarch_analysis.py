@@ -84,7 +84,7 @@ final_dict = {
     "Tech" : data_tech, 
     "Energy" : data_energy, 
     "Finance" : data_finance, 
-    "Healthcare" : data_healthcare
+    "Healthcare" : data_healthcare,
     "Retail" : data_retail
     }
 
