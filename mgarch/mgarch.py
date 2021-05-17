@@ -111,9 +111,14 @@ class mgarch:
 
             Q_t = np.zeros((self.T,self.N,self.N))
             R_t = np.zeros((self.T,self.N,self.N))
-            H_t = np.zeros((self.T,self.N,self.N))
+            H_t = np.zeros((self.T,self.N,self.N)) 
+            # R_t
+            # Q_t
+            # H_t
 
             Q_t[0] = np.matmul(self.rt[0].T/2, self.rt[0]/2)
+
+
 
             loglike = 0
             for i in range(1,self.T):
@@ -131,6 +136,7 @@ class mgarch:
             if self.dist == 'norm':
                 return {'dist': self.dist, 'cov': H_t[-1]*np.sqrt(ndays)}
             elif self.dist == 't':
+                print(H_t.shape, self.T, self.N)
                 return {'dist': self.dist, 'dof': self.dof, 'cov': H_t[-1]*np.sqrt(ndays)}
             
         else:
