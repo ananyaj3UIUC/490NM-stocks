@@ -5,16 +5,17 @@ from alpha_vantage.timeseries import TimeSeries
 from time import sleep
 import pickle
 
+'''
+THIS FILE TAKES ALL THE STOCK DATA FROM ALPHAVANTAGE
+PLACES IT INTO A LARGE DICTIONARY {stock : daily adjusted closing price}
+AND PICKLES IT
+'''
+
 # serial key for alpha vantage
 s_key = 'S2WB1VTMRBDU2XV3'
 
 # alpha vantage time series data as a pandas object
 time_series = TimeSeries(key=s_key, output_format = 'pandas')
-
-'''
-Measuring volativity difference for stock prices
-Comparing industries
-'''
 
 final_dict = {}
 
