@@ -19,7 +19,6 @@ cov_matrix_dict = {}
 counter = 0
 for i in range(0, len(x) - 1):
     for j in range(1, len(x)):
-        #data_retail = np.concatenate([i[:,None] for i in stoc.values()], axis = 1)
         data = np.concatenate((stock_dict[x[i]][:,None], stock_dict[x[j]][:,None]), axis = 1)
         lt = np.log(data)
         rt = lt[1:] - lt[:-1]

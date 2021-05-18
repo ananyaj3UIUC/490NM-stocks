@@ -1,13 +1,16 @@
 mgarch_pairwise_pickler compiles the stock data into a pickle file ("data.pickle")
 
 mgarch_pairwise_builder compiles all covariance matrices, places them into a dictionary with the label as the stock pair
-this dictionary is then pickled for future analysis, as it takes over 10 minutes to compile (on my laptop) and it is much faster to just store and read
+this dictionary is then pickled ("final_pair_dict.pickle") for future analysis, as it takes over 10 minutes to compile (on my laptop) and it is much faster to just store and read
 
 
 mgarch_pairwise_analysis loads the final dictionary from the 
 i.e. data_dict['AMZN-MSFT']['cov'] would return the covariance matrix between amazon and microsoft
+If you would like to run your own analysis on the covariance matrices, please do it within this file instead of running the other two
 
 Only the 3 files mentioned above are relevant. The other files were used for different purposes, not relevant to what was discussed as the final goal of this project (being the pairwise stock analysis).
+
+NOTE: ONLY RUN MGARCH_PAIRWISE_ANALYSIS. I am uploading the fully compiled pickle files directly to github (they are not large), so you do not need to build the pickles using the other two python files. 
 
 In total, 118 of 600 stocks have a negative covariance value present in the matrix. The output of mgarch_pairwise analysis is as shown below:
 
