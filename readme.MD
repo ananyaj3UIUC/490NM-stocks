@@ -12,7 +12,7 @@ Only the 3 files mentioned above are relevant. The other files were used for dif
 
 NOTE: ONLY RUN MGARCH_PAIRWISE_ANALYSIS. I am uploading the fully compiled pickle files directly to github (they are not large), so you do not need to build the pickles using the other two python files. 
 
-In total, 118 of 600 stocks have a negative covariance value present in the matrix. The output of mgarch_pairwise analysis is as shown below:
+In total, 124 of 600 stocks have a negative covariance value present in the matrix. The output of mgarch_pairwise analysis is as shown below:
 
 NEGATIVE COVARIANCE FOUND IN AMZN-XOM  
 NEGATIVE COVARIANCE FOUND IN AMZN-CVX  
@@ -132,5 +132,11 @@ NEGATIVE COVARIANCE FOUND IN COST-WFC
 NEGATIVE COVARIANCE FOUND IN LOW-FB  
 NEGATIVE COVARIANCE FOUND IN LOW-BP  
 NEGATIVE COVARIANCE FOUND IN LOW-CVS  
-total negative covariance count is 118 of 600 total pairs
+NEGATIVE COVARIANCE FOUND IN CVS-MSFT  
+NEGATIVE COVARIANCE FOUND IN CVS-AAPL  
+NEGATIVE COVARIANCE FOUND IN CVS-FB  
+NEGATIVE COVARIANCE FOUND IN CVS-COP  
+NEGATIVE COVARIANCE FOUND IN CVS-ABT  
+NEGATIVE COVARIANCE FOUND IN CVS-LOW  
+total negative covariance count is 124 of 600 total pairs
 

@@ -5,6 +5,12 @@ from alpha_vantage.timeseries import TimeSeries
 from time import sleep
 import pickle
 
+'''
+THIS FILE BUILDS A DICTIONARY OF STOCK PAIRS TO MGARCH PREDICTION OUTPUT
+IT IS STORED IN THE FORM {"stock1-stock2" : mgarch prediction output}
+IT HAS BEEN PICKLED FOR USE IN THE ANALYSIS FILE ("mgarch_pairwise_analysis.py")
+'''
+
 stock_dict = {}
 
 with open('data.pickle', 'rb') as handle:
@@ -17,7 +23,7 @@ cov_matrix_dict = {}
 
 
 counter = 0
-for i in range(0, len(x) - 1):
+for i in range(0, len(x)):
     for j in range(1, len(x)):
         data = np.concatenate((stock_dict[x[i]][:,None], stock_dict[x[j]][:,None]), axis = 1)
         lt = np.log(data)
