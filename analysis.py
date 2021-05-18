@@ -104,9 +104,11 @@ for i in final_dict.keys():
 
 
 '''
-next steps
+create a dictionary with pairs of stocks
+get the covariance matrix between all pairs of stocks
 
-compare predicted values with actual values <- already done in covariance matrix
-draw the fitted amount (?)
+values on the off diagonal are covariances
+
 
 '''
+

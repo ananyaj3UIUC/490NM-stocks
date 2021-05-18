@@ -136,7 +136,7 @@ class mgarch:
             if self.dist == 'norm':
                 return {'dist': self.dist, 'cov': H_t[-1]*np.sqrt(ndays)}
             elif self.dist == 't':
-                print(H_t.shape, self.T, self.N)
+                #print(H_t.shape, self.T, self.N)
                 return {'dist': self.dist, 'dof': self.dof, 'cov': H_t[-1]*np.sqrt(ndays)}
             
         else:
