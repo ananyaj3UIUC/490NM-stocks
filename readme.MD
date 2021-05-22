@@ -1,3 +1,5 @@
+This app uses multivariate GARCH analysis to determine negative price covariances between stocks across 5 industries: Technology, Energy, Retail, Healthcare and Finance.
+
 mgarch_pairwise_pickler compiles the stock data into a pickle file ("data.pickle")
 
 mgarch_pairwise_builder compiles all covariance matrices, places them into a dictionary with the label as the stock pair
